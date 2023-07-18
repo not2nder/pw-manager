@@ -1,0 +1,5 @@
+clipboard==0.0.4
+keyboard==0.13.5
+pick==2.2.0
+rich==13.3.3
+pwinput==1.0.3
