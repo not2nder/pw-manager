@@ -38,6 +38,7 @@ Menu Inicial
 ![](img/menu.png)
 
 Tabela de senhas
+
 ![](img/table.png)
 
 ### `⚙️` Futuras atualizações
