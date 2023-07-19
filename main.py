@@ -72,21 +72,19 @@ def color(input:str):
     "soundcloud":"[orange_red1]Soundcloud",
     "gmail":"[blue]G[red]m[yellow]a[blue]i[green]l",
     "facebook":"[blue3]Facebook",
+    "threads":"[grey78]Threads",
+    "spotify":"[sea_green2]Spotify",
+    "resso":"[deep_pink1]Resso",
+    "tiktok":"[steel_blue1]tik[deep_pink3]tok",
+    "tik tok":"[steel_blue1]tik[deep_pink3]tok",
     "":"[i]???",
     }
-    if input.lower() in servs:
-        return f"[bold]{servs[input.lower()]}[/bold]"
-    else:
-        return f"[bold]{input}[/bold]"
+    return f"[bold]{servs[input.lower()]}[/bold]" if input.lower() in servs else f"[bold]{input}[/bold]"
 
-def pass_strength(senha):
-    patterns = [r"[a-z]{8,}",r"[A-Z]{2,}",r"\W+",r"\d+"]
-    if all([re.findall(item,senha) for item in patterns]):
-        return f"[chartreuse3]{senha}"
-    elif not(any([re.findall(item,senha) for item in patterns])):
-        return f"[red]{senha}[/red]"
-    else:
-        return f"[orange3]{senha}"
+def pass_strength(senha:str):
+    patterns = [r"[a-z]",r"[A-Z]+",r"\d{2,}",r"\W+",r"^.{8,}"]
+    tester = [re.findall(item,senha) for item in patterns if re.findall(item,senha)]
+    return f"[chartreuse3]{senha}" if len(tester) == len(patterns) else f"[orange3]{senha}" if len(tester) >=4 else f"[red]{senha}"
 
 def confirm_options():
     os.system('cls')
