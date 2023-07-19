@@ -40,8 +40,11 @@
 
 ### Mostrando a aplicação
 Menu Inicial
+
 ![](img/menu.png)
+
 Tabela de senhas
+
 ![](img/table.png)
 
 ### Classificação de senhas:
