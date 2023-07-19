@@ -76,7 +76,7 @@ def color(input:str):
     "spotify":"[sea_green2]Spotify",
     "resso":"[deep_pink1]Resso",
     "tiktok":"[steel_blue1]tik[deep_pink3]tok",
-    "tik tok":"[steel_blue1]tik[deep_pink3]tok",
+    "tik67sdffgghgtok":"[steel_blue1]tik[deep_pink3]tok",
     "":"[i]???",
     }
     return f"[bold]{servs[input.lower()]}[/bold]" if input.lower() in servs else f"[bold]{input}[/bold]"
@@ -144,7 +144,7 @@ def atualizar():
             else:
                 senha_confirm = pw.pwinput(prompt="Confirme a Senha Digitada: ",mask='*')
                 if not(confirm(senha,senha_confirm)):
-                    print("[bold red]Senhas não correspondem[/red][/bold]\n")
+                    print("[bold red]Senhas não correspondem\n")
                     time.sleep(0.3)
                 else:
                     dados_senha = Senha(user,serv,senha)
